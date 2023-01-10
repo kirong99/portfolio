@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <title>Portfolio</title>
+</head>
+<body>
+    <div class="toggle">
+        <button>Menu</button>
+    </div>
+    <div class="overlay"></div>
+
+    <ul class="gnb">
+        <li><a href="#home" class="list">Home</a></li>
+        <li><a href="#about" class="list">About</a></li>
+        <li><a href="#skills" class="list">Skills</a></li>
+        <li><a href="#portfolio" class="list">Portfolio</a></li>
+        <li><a href="#contact" class="list">Contact</a></li>
+    </ul>
+
+    <div class="container">
+        <section class="welcome" id="home"></section>
+        <section class="about" id="about">
+            <div class="inner">
+                <div class="heading">
+                    <b>Lorem ipsum dolor sit amet</b>
+                    <h1>Section : About</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, odio pariatur autem quidem enim natus expedita doloremque sit molestiae numquam ipsa doloribus adipisci impedit magnam reprehenderit saepe, possimus nam neque ab quo optio corrupti eius velit quasi! Perferendis sequi porro dignissimos nisi minus, quae fugiat laudantium pariatur, facilis inventore quia a iste aliquam recusandae harum possimus voluptatibus? Ullam aperiam dolorem enim sunt voluptas, soluta quia corporis quibusdam est voluptatibus distinctio vitae quasi, laboriosam cum. Reiciendis hic ratione eos tempore eaque obcaecati eum nemo perspiciatis eveniet maxime qui saepe provident ullam voluptatum cumque ut, cum molestias consequatur! Ut nobis quaerat ab?</p>
+                </div>
+            </div>
+        </section>
+        <section class="Skills" id="skills">
+            <div class="inner">
+                <div class="heading">
+                    <b>Lorem ipsum dolor sit amet</b>
+                    <h1>Section : Skills</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, odio pariatur autem quidem enim natus expedita doloremque sit molestiae numquam ipsa doloribus adipisci impedit magnam reprehenderit saepe, possimus nam neque ab quo optio corrupti eius velit quasi! Perferendis sequi porro dignissimos nisi minus, quae fugiat laudantium pariatur, facilis inventore quia a iste aliquam recusandae harum possimus voluptatibus? Ullam aperiam dolorem enim sunt voluptas, soluta quia corporis quibusdam est voluptatibus distinctio vitae quasi, laboriosam cum. Reiciendis hic ratione eos tempore eaque obcaecati eum nemo perspiciatis eveniet maxime qui saepe provident ullam voluptatum cumque ut, cum molestias consequatur! Ut nobis quaerat ab?</p>
+                </div>
+            </div>
+        </section>
+        <section class="Portfolio" id="portfolio">
+            <div class="inner">
+                <div class="heading">
+                    <b>Lorem ipsum dolor sit amet</b>
+                    <h1>Section : Portfolio</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, odio pariatur autem quidem enim natus expedita doloremque sit molestiae numquam ipsa doloribus adipisci impedit magnam reprehenderit saepe, possimus nam neque ab quo optio corrupti eius velit quasi! Perferendis sequi porro dignissimos nisi minus, quae fugiat laudantium pariatur, facilis inventore quia a iste aliquam recusandae harum possimus voluptatibus? Ullam aperiam dolorem enim sunt voluptas, soluta quia corporis quibusdam est voluptatibus distinctio vitae quasi, laboriosam cum. Reiciendis hic ratione eos tempore eaque obcaecati eum nemo perspiciatis eveniet maxime qui saepe provident ullam voluptatum cumque ut, cum molestias consequatur! Ut nobis quaerat ab?</p>
+                </div>
+            </div>
+        </section>
+        <section class="Contact" id="contact">
+            <div class="inner">
+                <div class="heading">
+                    <b>Lorem ipsum dolor sit amet</b>
+                    <h1>Section : Contact</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas, odio pariatur autem quidem enim natus expedita doloremque sit molestiae numquam ipsa doloribus adipisci impedit magnam reprehenderit saepe, possimus nam neque ab quo optio corrupti eius velit quasi! Perferendis sequi porro dignissimos nisi minus, quae fugiat laudantium pariatur, facilis inventore quia a iste aliquam recusandae harum possimus voluptatibus? Ullam aperiam dolorem enim sunt voluptas, soluta quia corporis quibusdam est voluptatibus distinctio vitae quasi, laboriosam cum. Reiciendis hic ratione eos tempore eaque obcaecati eum nemo perspiciatis eveniet maxime qui saepe provident ullam voluptatum cumque ut, cum molestias consequatur! Ut nobis quaerat ab?</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        $('.toggle').click(function(){
+            $('.toggle, .overlay, .gnb').toggleClass('active')
+        })
+        $('.list').click(function(){
+            $('.toggle, .overlay, .gnb').removeClass('active')
+        })
+    </script>
+</body>
+</html>

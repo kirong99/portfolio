@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+*{
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+    line-height: 1.6em;
+}
+li{
+    list-style: none;
+}
+
+/* 토글 */
+.toggle{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+.toggle button{
+    width: 60px;
+    height: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 24px;
+    cursor: pointer;
+    color: #000;
+    box-shadow: 0 0 10px rgba(255,255,255,.5);
+    transition: .5s;
+    border-color: rgba(0,0,0,.01);
+}
+
+/* 토글 트리거 */
+.toggle.active button{
+    background-color: rgb(200 132 223);
+}
+
+/* overlay */
+/* .overlay{
+    background-color: #000;
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    border-radius: 50%;
+    top: 20px;
+    left: 20px;
+    transition: 1s;
+    opacity: 0;
+    z-index: 1;
+}
+.overlay.active{
+    transform: scale(120);
+    opacity: 1;
+} */
+
+/* overlay - 상하버전 */
+.overlay{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.overlay::before,.overlay::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0;
+    /* width: 0;
+    height: 100%; */ 
+    /* 좌우에서 열리는 버전 */
+    background-color: #000;
+    transition: .35s;
+}
+.overlay::before{
+    top: 0;
+    /* 중앙에서 상하로 열리려면 50% */
+    left: 0; 
+    /* 좌우에서 열리는 버전, 중앙에서 열리려면 50% */
+}
+.overlay::after{
+    bottom: 0;
+    /* 중앙에서 상하로 열리려면 50% */
+    right: 0;
+    /* 좌우에서 열리는 버전, 중앙에서 열리려면 50% */
+    background-color: #000;
+}
+.overlay.active:before,.overlay.active::after{
+    height: 50%;
+}
+
+/* common */
+section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section:nth-child(odd){
+    background-color: #ccc;
+}
+section .inner{
+    width: 1150px;
+    text-align: center;
+}
+
+/* welcome */
+.welcome{
+    height: 100vh;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* heading */
+.heading h1{
+    font-size: 3em;
+    position: relative;
+    padding-bottom: 30px;
+}
+.heading h1::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 4px;
+    background-color: red;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+.heading p{
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+
+.gnb{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .35s;
+    z-index: 2;
+    padding: 0;
+}
+.gnb.active{
+    opacity: 1;
+    visibility: visible;
+}
+.gnb a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 3.5em;
+    line-height: 1.6em;
+    position: relative;
+}
+.gnb a::after{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 0;
+    background-color: rgb(200 132 223);
+    left: 0;
+    bottom: 7px;
+    z-index: -1;
+    transition: .35s;
+}
+.gnb a:hover::after{
+    width: 100%;
+}
