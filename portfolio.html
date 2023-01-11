@@ -9,8 +9,10 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <h1 class="logo">logo</h1>
     <div class="toggle">
-        <button>목록</button>
+        <i class="xi-apps channel"><button>목록</button></i>
+        <a href="https://github.com/kirong99" target="_blank"><i class="xi-github github"></i></a>
     </div>
     <div class="overlay"></div>
 
@@ -23,7 +25,24 @@
     </ul>
 
     <div class="container">
-        <section class="welcome" id="home"></section>
+        <section class="welcome" id="home">
+            <div class="inner">
+                <div class="heading">
+                    <b class="subtitle">최기룡의 Portfolio</b>
+                    <h1 class="title">Portfolio</h1>
+                    <p class="desc">
+                        CGR 채널에 오신 걸 환영합니다!<br>
+                        오로지 웹 퍼블리셔 "최기룡"을 소개하는 채널이니 많은 시청 부탁드립니다!
+                    </p>
+                </div>
+                <div class="next">
+                    <a href="#about">
+                        <i class="xi-mouse"></i>
+                        <p>다음으로</p>
+                    </a>
+                </div>
+            </div>
+        </section>
         <section class="about" id="about">
             <div class="inner">
                 <div class="heading">
@@ -63,11 +82,11 @@
     </div>
 
     <script>
-        $('.toggle').click(function(){
-            $('.toggle, .overlay, .gnb').toggleClass('active')
+        $('.channel').click(function(){
+            $('.channel, .overlay, .gnb').toggleClass('active')
         })
         $('.list').click(function(){
-            $('.toggle, .overlay, .gnb').removeClass('active')
+            $('.channel, .overlay, .gnb').removeClass('active')
         })
     </script>
 </body>

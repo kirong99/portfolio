@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
 @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 *{
     font-family: 'Noto Sans KR', sans-serif;
     box-sizing: border-box;
@@ -16,31 +17,65 @@ body{
 li{
     list-style: none;
 }
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #222;
+}
 
 /* 토글 */
 .toggle{
+    width: 100%;
     position: fixed;
-    top: 20px;
-    left: 20px;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 20px;
 }
-.toggle button{
-    width: 60px;
+.toggle i:not(.github){
+    position: relative;
+    width: 100px;
     height: 40px;
-    font-size: 16px;
     background-color: #fff;
     text-align: center;
     border-radius: 24px;
     cursor: pointer;
     color: #000;
-    box-shadow: 0 0 10px rgba(255,255,255,.5);
+    box-shadow: 0 0 10px rgb(255 255 255 / 50%);
     transition: .5s;
     border-color: rgba(0,0,0,.01);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    gap: 5px;
+    left: 20px;
 }
 
-/* 토글 트리거 */
-.toggle.active button{
-    background-color: rgb(200 132 223);
+.toggle button{
+    border: none;
+    background-color: #fff;
+    font-size: 16px;
+    position: relative;
+    top: -1px;
+    cursor: pointer;
+}
+
+.logo{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.github{
+    position: relative;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
 }
 
 /* overlay */
@@ -64,13 +99,16 @@ li{
 /* overlay - 상하버전 */
 .overlay{
     position: fixed;
-    z-index: 1;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    z-index: -1;
+    transition: .5s;
 }
-
+.overlay.active{
+    z-index: 1;
+}
 .overlay::before,.overlay::after{
     content: '';
     position: absolute;
@@ -80,7 +118,7 @@ li{
     height: 100%; */ 
     /* 좌우에서 열리는 버전 */
     background-color: #000;
-    transition: .35s;
+    transition: .5s;
 }
 .overlay::before{
     top: 0;
@@ -106,18 +144,12 @@ section{
     justify-content: center;
     align-items: center;
 }
-section:nth-child(odd){
+section:nth-child(even){
     background-color: #ccc;
 }
 section .inner{
     width: 1150px;
     text-align: center;
-}
-
-/* welcome */
-.welcome{
-    height: 100vh;
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
 }
 
 /* heading */
@@ -140,6 +172,23 @@ section .inner{
     font-size: 1.2em;
     line-height: 1.5em;
 }
+
+/* welcome */
+.welcome{
+    height: 100vh;
+    background-color: #fff;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+    width: 100%;
+}
+
+.welcome .subtitle{
+    
+}
+.welcome .title{
+    margin: 20px;
+}
+
+/* gnb */
 
 .gnb{
     position: fixed;
@@ -176,4 +225,37 @@ section .inner{
 }
 .gnb a:hover::after{
     width: 100%;
+}
+
+.next{
+    position: absolute;
+    bottom: 30px;
+    left: 47.5%;
+    transform: translateX(-50%);
+    animation: move 2s infinite;
+    z-index: 1;
+}
+.next a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.next i{
+    font-size: 40px;
+}
+.next a{
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
 }
