@@ -142,7 +142,7 @@ a{
 }
 
 /* common */
-section{
+section:not(.about){
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -272,11 +272,11 @@ section .inner{
     margin-top: 30px;
     position: relative;
 }
-.swiper{
+.swiper:not(.portfolio-swiper){
     height: 10vh;
     position: static;
 }
-.swiper-slide {
+.swiper-slid:not(.portfolio-swiper-slide) {
     text-align: center;
     font-size: 18px;
     background: #fff;
