@@ -185,9 +185,6 @@ section .inner{
     width: 100%;
 }
 
-.welcome .subtitle{
-    
-}
 .welcome .title{
     margin: 20px;
 }
@@ -264,77 +261,63 @@ section .inner{
     }
 }
 
-/* swiper */
 .onair{
-    width: 90%;
+    width: 100%;
     height: 10vh;
     margin: auto;
     margin-top: 30px;
     position: relative;
 }
-.swiper:not(.portfolio-swiper){
-    height: 10vh;
-    position: static;
+.or-container{
+    width: 90%;
+    margin: auto;
+    height: 100%;
 }
-.swiper-slid:not(.portfolio-swiper-slide) {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    border: 1px solid #000;
-}
-
-.swiper-wrapper .odd{
-    height: 8vh;
-    top: 18px;
-}
-.swiper-wrapper .box{
+.box{
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.swiper-wrapper .box div{
     height: 100%;
+    gap:10px
+}
+.box div{
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-}
-.swiper-wrapper .box div.onair-content{
-    height: 100%;
-    justify-content: left;
-    padding-left: 20px;
-    font-size: 24px;
-}
-.onair-block{
     flex: 1;
+    height: inherit;
+    line-height: 10vh;
+}
+.box div h3,.box div h2{
+    height: inherit;
+    text-align: center;
     border: 1px solid #000;
+}
+.box div h3{
+    flex: 0.3;
+}
+.box div h2{
+    flex: 0.7;
+}
+.btn{
+    position: absolute;
+}
+.box .prev,.box .next2{
+    height: 90%;
+    line-height: 8vh;
+    top: 9px;
+    position: relative;
+}
+.or-prev{
+    left: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.or-next{
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.now h3{
     text-transform: uppercase;
-    font-size: 20px;
-}
-.onair-content{
-    flex: 3;
-    border: 1px solid #000;
-    justify-content: left;
-}
-.onair .swiper-button-next{
-    right: -60px
-}
-.onair .swiper-button-prev{
-    left: -60px;
-}
-.onair .swiper-button-next,.onair .swiper-button-prev{
-    color: #707070;
 }
