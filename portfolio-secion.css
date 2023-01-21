@@ -1,12 +1,12 @@
 .portfolio{
-    width: 1245px;
+
     height: 100%;
     position: relative;
     margin: auto;
 }
 .swiper2 {
-    width: 100%;
-    height: 70vh;
+    width: 1245px;
+    height: 100vh;
   }
 
   .swiper-slide {
@@ -27,6 +27,25 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+  .swiper-slide .project{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 1em;
+  }
+  .swiper-slide .project .image{
+    width: 50%;
+    height: 100%;
+    flex: 0.4;
+  }
+  .swiper-slide .project-desc{
+    flex: 0.6;
+    text-align: center;
+    height: 100%;
+    padding-left: 30px;
   }
 
   .swiper-slide img {
