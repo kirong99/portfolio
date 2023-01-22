@@ -22,6 +22,7 @@
         <a href="https://github.com/kirong99" target="_blank"><i class="xi-github github"></i></a>
     </div>
     <div class="overlay"></div>
+    <div class="move-top">top</div>
 
     <ul class="gnb">
         <li><a href="#home" class="list">Home</a></li>
@@ -91,13 +92,13 @@
                 <div class="top skill-box">
                     <div class="skill">
                         <div class="circle">
-                            <p class="percent">...</p>
+                            <p class="percent">95%</p>
                         </div>
-                        <p class="text">...</p>
+                        <p class="text">html</p>
                     </div>
                     <div class="skill">
                         <div class="circle">
-                            <p class="percent">...</p>
+                            <p class="percent">90%</p>
                         </div>
                         <p class="text">...</p>
                     </div>
@@ -205,6 +206,24 @@
         slidesPerGroup:1,
         cssMode:true
       });
+
+      window.addEventListener('scroll',function(){
+        console.log(window.scrollY)
+        if(window.scrollY >= show){
+            move.style.display = "flex"
+        }else{
+            move.style.display = "none"
+        }
+      })
+
+      const move = document.querySelector(".move-top")
+      const home = document.querySelectorAll("section")
+      const off = home[0].offsetTop
+      const show = home[1].offsetTop
+
+      move.onclick = function(){
+        window.scroll({top:off, behavior:'smooth'})
+      }
 
 
     </script>
