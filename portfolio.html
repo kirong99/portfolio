@@ -44,6 +44,7 @@
                             오로지 웹 퍼블리셔 "최기룡"을 소개하는 채널이니 많은 시청 부탁드립니다!
                         </p>
                     </div>
+                    <p class="emoji">&#128250;</p>
                 </div>
                 <div class="next">
                     <a href="#about">
@@ -55,35 +56,24 @@
         </section>
         <section class="about" id="about">
             <div class="about-section">
+                <h1 class="title-about">About Me</h1>
                 <div class="profile">
                     <div class="face">
-                        <img src="img/profile.jpg" alt="">
-                        <i class="xi-check-min"></i>    
+                        <img src="img/profile.jpg" alt="">  
                     </div>
-                    <h1>CodingWorks<span>Class in Inflearn</span></h1>
-                    <p>I'm a web publisher, Andrew. I'm looking forward to a good project. please call back.<span>andrew@codingworks.com</span></p>
-                    <a class="view-portfolio" href="#none">view my portfolio</a>
-                    <div class="sns">
-                        <div>
-                            <i class="xi-instagram"></i>
-                            <span><big>15.6k</big>followers</span>
-                        </div>
-                        <div>
-                            <i class="xi-kakaostory"></i>
-                            <span><big>12.9k</big>followers</span>
-                        </div>
-                        <div>
-                            <i class="xi-twitter"></i>
-                            <span><big>10.2k</big>followers</span>
-                        </div>
-                    </div>
-                    <div class="like-more">
-                        <span class="btn-like"></span>
-                        <span class="btn-more"><i class="xi-ellipsis-v"></i></span>
-                    </div>
+                    <h1>최기룡<span>Choi, Giryong</span></h1>
+                    <a class="view-portfolio" href="#none">이력서 다운로드</a>
                 </div>
                 <div class="profile-desc">
-                    <h5>...</h5>
+                    <h5>이름 : 최기룡</h5>
+                    <h5>나이 : 25세(1999년생)</h5>
+                    <h5>학력 : 대림대학교 컴퓨터정보학부 졸업</h5>
+                    <h5>자격증 : 웹 디자인 기능사</h5>
+                    <h5>대외 활동 : 2022년 한이음 공모전 참가</h5>
+                    <h5>경력 : 신입</h5>
+                    <div class="strength">
+                        <h5><span>"</span><b>집념과 꼼꼼함</b>을 강점으로 가진 웹 퍼블리셔입니다.<br>좋은 결과물을 위해 노력하고 그로 인한 뿌듯함이 즐겁기에 더욱 <br>노력을 하고 있습니다. 좋아하는 일만이 아닌 <b>잘하는 일이 되는 것이 목표</b>입니다.<span>"</span></h5>
+                    </div>
                 </div>
             </div>
         </section>
@@ -211,15 +201,18 @@
         console.log(window.scrollY)
         if(window.scrollY >= show){
             move.style.display = "flex"
+            aboutTitle.classList.add('title-active')
         }else{
             move.style.display = "none"
+            aboutTitle.classList.remove('title-active')
         }
       })
 
       const move = document.querySelector(".move-top")
       const home = document.querySelectorAll("section")
+      const aboutTitle = document.querySelector(".title-about")
       const off = home[0].offsetTop
-      const show = home[1].offsetTop
+      const show = home[1].offsetTop-300
 
       move.onclick = function(){
         window.scroll({top:off, behavior:'smooth'})

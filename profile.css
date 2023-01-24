@@ -1,7 +1,6 @@
 @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
 
 body{
-    background: url(img/svg-background.svg);
     color: #333;
     font-size: 15px;
     line-height: 1.6em;
@@ -16,22 +15,49 @@ a{
 .about{
     height: 100vh;
 }
-.about-section{
+.about-section:not(.title-about){
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+}
+
+.title-about{
+    position: absolute;
+    top: 16%;
+    left: -1%;
+    font-size: 180px;
+    color: rgb(70 70 70 / 40%);
+    transform: rotate(-10deg);
+    opacity: 0;
+}
+
+.title-active{
+    opacity: 1;
+    animation: aboutmove 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes aboutmove{
+    0%{
+        left: -46%;
+    }
+    100%{
+        left: -1%;
+    }
 }
 
 .frame{
     width: 100%;
     text-align: center;
 }
+
 .profile{
-    width: 320px;
+    width: 370px;
     padding: 50px 30px;
     box-sizing: border-box;
-    background: #fff;
+    background: #111;
     border-radius: 7px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
@@ -39,11 +65,12 @@ a{
     display: inline-block;
     margin: 20px;
     transition: .3s;
+    color: #fff;
 }
 
 .face{
-    width: 120px;
-    height: 120px;
+    width: 300px;
+    height: 300px;
     /* margin: auto; */
     display: inline-block; /* 부모 요소에 중앙 정렬이 되어 있기 때문 */
     position: relative;
@@ -58,15 +85,17 @@ a{
     color: #fff;
 }
 .face img{
-    width: 120px;
-    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+    border-radius: 16px;
+    object-fit: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .profile h1{
     font-size: 26px;
     font-weight: normal;
-    margin-bottom: 0;
+    margin: 10px;
 }
 .profile h1 span{
     display: block;
@@ -74,14 +103,6 @@ a{
     color: #bbb;
     text-transform: uppercase;
     margin-top: 10px;
-}
-.profile p{
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-.profile p span{
-    display: block;
-    color: royalblue;
 }
 .view-portfolio{
     background-color: #00cec9;
@@ -92,92 +113,34 @@ a{
     display: inline-block;
     width: 180px;
 }
-.sns{
+.strength{
     border-top: 1px solid #eee;
     padding-top: 30px;
     margin-top: 30px;
 }
-.sns div{
-    display: inline-block;
-    width: 30%;
-}
-.sns div i{
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-    color: #fff;
-    width: 70px;
-    height: 70px;
-    font-size: 2.5em;
-    line-height: 70px;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-}
-.sns div:nth-child(1) i{
-    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
-}
-.sns div:nth-child(2) i{
-    background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
-}
-.sns div:nth-child(3) i{
-    background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%);
-}
-.sns div span{
-    font-size: 13px;
-    color: #bbb;
-}
-.sns div span big{
-    display: block;
-    color: #333;
-    font-size: 22px;
-    font-weight: 500;
-    margin-top: 10px;
-}
-.like-more{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 18px;
-}
-.btn-like{
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    cursor: pointer;
-}
-.btn-like::before{
-    content: "\ea11";
-    font-family: xeicon;
-}
-.btn-like.active::before{
-    content: "\ea10";
-}
-.btn-more{
-    cursor: pointer;
-}
-
-/* dark-mode */
-.profile.dark{
-    background-color: #323650;
-    transition: .3s;
-}
-.profile.dark .btn-mode,.profile.dark .like-more{
-    color: #fff;
-}
-.profile.dark h1{
-    color: #fff;
-}
-.profile.dark p{
-    color: #fff;
-}
-.profile.dark .sns{
-    border-top: 1px solid #555;
-}
-.profile.dark .sns div span big{
-    color: #fff;
-}
-.profile.dark .btn-mode::before{
-    content: "\eba3";
-}
 
 .profile-desc{
-    border: 1px solid #000;
+    width: 620px;
+    background-color: #111;
+    border-radius: 8px;
+    padding: 50px 30px;
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+    top: 50px;
+}
+.profile-desc h5{
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 1.6em;
+}
+.profile-desc h5::before:not(.strength > h5){
+    content: 'O';
+    padding-right: 20px;
+}
+.strength h5 span{
+    padding-right: 5px;
+    font-size: 24px;
 }
