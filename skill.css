@@ -1,26 +1,135 @@
-.skill-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid #000;
+
+.skills{
+    height: 100vh;
+}
+.skill-section{
+    width: 1280px;
+    margin: auto;
+    height: 100vh;
+}
+.skill-section h1.title-skill{
+    text-align: center;
+    font-size: 180px;
+    position: relative;
+    top: 50%;
+    left: 4%;
+    transform: translateY(-50%);
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(112 112 112 / 50%);
+    opacity: 0;
+}
+.skill-section h1.skill-active{
+    animation: skillMove 2s forwards;
+}
+@keyframes skillMove{
+    0%{
+        opacity: 0;
+        top: 0;
+    }
+    100%{
+        opacity: 1;
+        top: 50%;
+    }
 }
 .skill{
-    margin-right: 10px;
-
+    position: relative;
+    height: inherit;
 }
-.skill:nth-child(4){
-    margin-right: 0;
-}
-
-.top{
-    margin-bottom: 30px;
-}
-.circle{
-    width: 200px;
-    height: 200px;
-    background: #fff;
-    border-radius: 50%;
+.skill div::before{
+    content: '시맨틱 마크업 \A 웹 표준 및 웹 접근성을 고려하여 마크업 \A 크로스 브라우징';
+    position: absolute;
+    background-color: #ccc;
+    width: 180px;
+    height: 140px;
+    color: #000;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    padding: 1rem;
     display: flex;
+    align-items: center;
+    border-radius: 24px;
+    top: -50%;
+    left: 226%;
+    transform: translateX(-50%);
+    white-space: pre-wrap;
+}
+.skill div::after{
+    content: '';
+    position: absolute;
+    background-color: #ccc;
+    width: 20px;
+    height: 20px;
+    top: 30%;
+    left: 122%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 0;
+}
+.skill div::before,.skill div::after{
+    opacity: 0;
+    transition: .3s;
+}
+.skill div:hover:before,.skill div:hover::after{
+    opacity: 1;
+    transition: .3s;
+}
+.skill div{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+}
+
+.skill div i{
+    color: orange;
+    font-size: 96px;
+}
+.skill div p{
+    color: #fff;
+    font-size: 20px;
+}
+
+.skill div.css{
+    left: 95%;
+    top: 22%;
+}
+
+.skill div.css::before{
+    content: 'CSS 속성 이해 \A미디어 쿼리를 이용한 반응형 웹 \A Animation \A SCSS';
+    left: -140%;
+}
+.skill div.css::after{
+    left: -35%;
+}
+.skill div.css i{
+    color: dodgerblue;
+}
+.skill div.javascript{
+    left: 5%;
+    top: 43%;
+}
+.skill div.more{
+    top: 78%;
+    left: 5.5%;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    border-color: orange;
+}
+.skill div.React{
+    left: 96%;
+    top: 60%;
+}
+.skill div.React i{
+    color: darkblue;
+}
+.skill div.React::before{
+    left: -140%;
+}
+.skill div.React::after{
+    left: -35%;
 }
