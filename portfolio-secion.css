@@ -69,6 +69,14 @@
     margin-bottom: 30px;
     font-size: 48px;
   }
+  .swiper-slide .project-desc h1.where,.swiper-slide .project-desc h1.today{
+    margin-bottom: 0;
+    line-height: 1.2em;
+    font-size: 40px;
+}
+.swiper-slide .project-desc h1.where span{
+  color: dodgerblue;
+}
   .swiper-slide .project-desc p:nth-of-type(1){
     margin-top: 20px;
   }
@@ -77,10 +85,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 500px;
   }
   .swiper-slide .project-desc p span:nth-child(1){
-    width: 150px;
+    width: 200px;
   }
   .swiper-slide .project-desc p span:nth-child(2){
     width: 300px;
