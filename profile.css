@@ -31,6 +31,8 @@ a{
     color: rgb(70 70 70 / 40%);
     transform: rotate(-10deg);
     opacity: 0;
+    color: transparent;
+    -webkit-text-stroke: 1px #cccccc29;
 }
 
 .title-active{

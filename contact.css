@@ -3,15 +3,42 @@
 }
 .contact .title-ct{
     position: absolute;
-    top: 25%;
-    font-size: 48px;
+    top: 15%;
+    font-size: 180px;
+    color: transparent;
+    -webkit-text-stroke: 1px #cccccc5c;
+    animation: shake 3s infinite;
+}
+@keyframes shake{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 .container-ct .email{
     font-size: 24px;
+    text-align: center;
+    color: #fff;
+}
+.container-ct .email a{
+    font-size: 42px;
+    color: #fff;
+}
+.container-ct .email a:hover{
+    color: transparent;
+    -webkit-text-stroke: 1px dodgerblue;
+    cursor: pointer;
+    transition: .3s;
 }
 .container-ct .email p{
     text-align: center;
     margin-top: 30px;
+    font-size: 16px;
 }
 .copyright{
     text-align: center;

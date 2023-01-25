@@ -35,7 +35,7 @@
     position: relative;
     height: inherit;
 }
-.skill div::before{
+.skill div::before:not(.next){
     content: '시맨틱 마크업 \A 웹 표준 및 웹 접근성을 고려하여 마크업 \A 크로스 브라우징';
     position: absolute;
     background-color: #ccc;
@@ -54,7 +54,7 @@
     transform: translateX(-50%);
     white-space: pre-wrap;
 }
-.skill div::after{
+.skill div::after:not(.next){
     content: '';
     position: absolute;
     background-color: #ccc;
@@ -73,7 +73,7 @@
     opacity: 1;
     transition: .3s;
 }
-.skill div{
+.skill div:not(.next){
     width: 100px;
     height: 100px;
     display: flex;
@@ -81,11 +81,11 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 15%;
+    top: 8%;
     left: 5%;
 }
 
-.skill div i{
+.skill div i:not(.next i){
     color: orange;
     font-size: 96px;
 }
@@ -111,7 +111,7 @@
 }
 .skill div.javascript{
     left: 5%;
-    top: 43%;
+    top: 40%;
 }
 .skill div.more{
     top: 78%;
@@ -132,4 +132,7 @@
 }
 .skill div.React::after{
     left: -35%;
+}
+.skill-next{
+    bottom: 60px;
 }
