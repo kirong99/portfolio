@@ -34,6 +34,10 @@
 .skill{
     position: relative;
     height: inherit;
+    opacity: 0;
+}
+.skills-active{
+    animation: fadein 2s forwards;
 }
 .skill div::before{
     content: '시맨틱 마크업 \A 웹 표준 및 웹 접근성을 고려하여 마크업 \A 크로스 브라우징';
@@ -114,7 +118,7 @@
     top: 50%;
 }
 .skill div.javascript::before{
-    content: '기본 문법 이해\AjQuery 및 React 사용 가능\A스크롤,슬라이드 등 소스 작성 가능';
+    content: '기본 문법 이해\AjQuery 및 React 사용 가능\AReact는 기초만 활용 가능\A스크롤,슬라이드 등 소스 작성 가능';
 }
 .skill div.more{
     top: 70%;

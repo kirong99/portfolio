@@ -67,7 +67,21 @@ a{
     display: inline-block;
     margin: 20px;
     transition: .3s;
+    opacity: 0;
     color: #fff;
+}
+.profile-active{
+    animation: fadein-up 2s forwards;
+}
+@keyframes fadein-up{
+    0%{
+        opacity: 0;
+        transform: translateY(-30%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .face{
@@ -129,18 +143,27 @@ a{
     color: #fff;
     font-weight: 300;
     position: relative;
-    top: 50px;
+    top: -5%;
+    opacity: 0;
+    transition: .5s;
+}
+.profile-desc-active{
+    animation: fadein 2s 1s forwards;
+}
+@keyframes fadein{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.profile-desc h1{
+    font-size: 32px;
 }
 .profile-desc h5{
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    font-weight: 300;
     font-size: 20px;
-    line-height: 1.6em;
-}
-.profile-desc h5::before:not(.strength > h5){
-    content: 'O';
-    padding-right: 20px;
+    font-weight: 300;
 }
 .strength h5 span{
     padding-right: 5px;

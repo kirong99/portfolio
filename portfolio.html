@@ -67,12 +67,7 @@
                     <a class="view-portfolio" href="#none">이력서 다운로드</a>
                 </div>
                 <div class="profile-desc">
-                    <h5>이름 : 최기룡</h5>
-                    <h5>나이 : 25세(1999년생)</h5>
-                    <h5>학력 : 대림대학교 컴퓨터정보학부 졸업</h5>
-                    <h5>자격증 : 웹 디자인 기능사</h5>
-                    <h5>대외 활동 : 2022년 한이음 공모전 참가</h5>
-                    <h5>경력 : 신입</h5>
+                    <h1>끊임없는 노력.</h1>
                     <div class="strength">
                         <h5><span>"</span><b>집념과 꼼꼼함</b>을 강점으로 가진 웹 퍼블리셔입니다.<br>좋은 결과물을 위해 노력하고 그로 인한 뿌듯함이 즐겁기에 더욱
                             <br>노력을 하고 있습니다. 좋아하는 일만이 아닌 <b>잘하는 일이 되는 것이 목표</b>입니다.<span>"</span></h5>
@@ -259,15 +254,21 @@
             if (window.scrollY >= show) {
                 move.style.display = "flex"
                 aboutTitle.classList.add('title-active')
-            } else if (window.scrollY <= show && window.scrollY >= skill) {
+                profile.classList.add('profile-active')
+                profileDesc.classList.add('profile-desc-active')
+            } else if (window.scrollY <= show || window.scrollY >= skill) {
                 aboutTitle.classList.remove('title-active')
+                profile.classList.remove('profile-active')
+                profileDesc.classList.remove('profile-desc-active')
             } else {
                 move.style.display = "none"
             }
             if (window.scrollY >= skill) {
                 skillTItle.classList.add('skill-active')
+                skill2.classList.add('skills-active')
             } else if (window.scrollY <= skill || window.scrollY >= portfolio) {
                 skillTItle.classList.remove('skill-active')
+                skill2.classList.remove('skills-active')
             }
         })
 
@@ -275,6 +276,9 @@
         const home = document.querySelectorAll("section")
         const aboutTitle = document.querySelector(".title-about")
         const skillTItle = document.querySelector(".title-skill")
+        const profile = document.querySelector(".profile")
+        const profileDesc = document.querySelector(".profile-desc")
+        const skill2 = document.querySelector(".skill")
         const off = home[0].offsetTop
         const show = home[1].offsetTop - 300
         const skill = home[2].offsetTop - 300
