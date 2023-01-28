@@ -31,7 +31,7 @@
 }
 .container-ct .email a:hover{
     color: transparent;
-    -webkit-text-stroke: 1px dodgerblue;
+    -webkit-text-stroke: 1px #00e7ff;
     cursor: pointer;
     transition: .3s;
 }

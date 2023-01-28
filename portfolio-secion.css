@@ -4,6 +4,17 @@
     position: relative;
     margin: auto;
 }
+.portfolio-title{
+    color: transparent;
+    -webkit-text-stroke: 1px #cccccc4f;
+    font-size: 84px;
+    position: absolute;
+    letter-spacing: 50px;
+    top: 8%;
+    text-transform: uppercase;
+    right: 3%;
+    z-index: 1;
+}
 .swiper2 {
     width: 1245px;
     height: 100vh;
@@ -103,4 +114,7 @@
     border: 1px solid #fff;
     padding: 1em;
     border-radius: 16px;
+  }
+  .portfolio .swiper-button-next,.portfolio .swiper-button-prev{
+    color: #00e7ff;
   }
