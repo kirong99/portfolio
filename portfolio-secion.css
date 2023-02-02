@@ -56,6 +56,7 @@
     width: 50%;
     height: 100%;
     flex: 0.4;
+    border-radius: 16px;
   }
   .swiper-slide .project-desc{
     flex: 0.6;
@@ -75,6 +76,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 16px;
   }
     .swiper-slide .project-desc .title{
     margin-bottom: 30px;
@@ -115,6 +117,23 @@
     padding: 1em;
     border-radius: 16px;
   }
+  .detail:hover{
+    background-color: dodgerblue;
+    border: none;
+}
   .portfolio .swiper-button-next,.portfolio .swiper-button-prev{
     color: #00e7ff;
+  }
+  .portfolio-title-active{
+    animation: right 2s forwards;
+  }
+  @keyframes right{
+    0%{
+      opacity: 0;
+      right: -40%;
+    }
+    100%{
+      opacity: 1;
+      right: 0;
+    }
   }

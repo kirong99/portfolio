@@ -160,7 +160,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="project">
                             <div class="image">
                                 <img src="img/가히 표지.png" alt="">
@@ -174,7 +174,7 @@
                                 <a class="detail" href="">프로젝트 상세 보기</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="swiper-slide">
                         <div class="project">
                             <div class="image">
@@ -190,7 +190,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-slide">
+                    <!-- <div class="swiper-slide">
                         <div class="project">
                             <div class="image">
                                 <img src="img/투데이_로고.jpg" alt="">
@@ -204,7 +204,7 @@
                                 <a class="detail" href="">프로젝트 상세 보기</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="swiper-button-next"></div>
@@ -270,6 +270,11 @@
                 skillTItle.classList.remove('skill-active')
                 skill2.classList.remove('skills-active')
             }
+            if(window.scrollY >= portfolio){
+                portTitle.classList.add('portfolio-title-active')
+            }else if(window.scrollY <= portfolio || window.scrollY >= contact){
+                portTitle.classList.remove('portfolio-title-active')
+            }
         })
 
         const move = document.querySelector(".move-top")
@@ -279,10 +284,12 @@
         const profile = document.querySelector(".profile")
         const profileDesc = document.querySelector(".profile-desc")
         const skill2 = document.querySelector(".skill")
+        const portTitle = document.querySelector(".portfolio-title")
         const off = home[0].offsetTop
         const show = home[1].offsetTop - 300
         const skill = home[2].offsetTop - 300
         const portfolio = home[3].offsetTop - 300
+        const contact = home[4].offsetTop - 300
 
         console.log(show)
 
