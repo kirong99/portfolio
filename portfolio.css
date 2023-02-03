@@ -39,7 +39,7 @@ a{
 .channel.active + a .github{
     opacity: 0;
 }
-.toggle i:not(.github){
+.toggle i:not(.fa-github){
     position: relative;
     width: 100px;
     height: 40px;
@@ -101,7 +101,7 @@ a{
     }
 }
 
-.github{
+.fa-github{
     position: relative;
     right: 20px;
     font-size: 32px;
@@ -314,6 +314,7 @@ section .inner{
 }
 .next i{
     font-size: 40px;
+    margin-right: 10px;
 }
 
 @keyframes move{
