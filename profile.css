@@ -1,4 +1,4 @@
-@import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+/* @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); */
 
 body{
     color: #333;
@@ -61,7 +61,6 @@ a{
     box-sizing: border-box;
     background: #111;
     border-radius: 7px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     text-align: center;
     position: relative;
     display: inline-block;
