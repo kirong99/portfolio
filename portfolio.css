@@ -36,10 +36,10 @@ a{
     align-items: center;
     top: 20px;
 }
-.channel.active + a .github{
+.channel.active + a .fa-github{
     opacity: 0;
 }
-.toggle i:not(.fa-github){
+.toggle i:not(.toggle a .fa-github){
     position: relative;
     width: 100px;
     height: 40px;
@@ -101,7 +101,7 @@ a{
     }
 }
 
-.fa-github{
+.toggle a .fa-github{
     position: relative;
     right: 20px;
     font-size: 32px;
