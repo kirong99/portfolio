@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
 /* @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css'); */
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'S-CoreDream-3Light', sans-serif;
     box-sizing: border-box;
 }
 html{
@@ -346,4 +352,3 @@ section .inner{
     align-items: center;
     font-size: 20px;
 }
-
